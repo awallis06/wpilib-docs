@@ -283,7 +283,7 @@ Our code needs to reference the components of WPILib that are used. In C++ this 
 
             .. remoteliteralinclude:: https://raw.githubusercontent.com/wpilibsuite/allwpilib/v2027.0.0-alpha-7/wpilibcExamples/src/main/cpp/examples/GettingStarted/cpp/Robot.cpp
                :language: c++
-               :lines: 47-56
+               :lines: 46-55
                :lineno-match:
 
          .. tab-item:: Python
@@ -466,7 +466,7 @@ The sample robot in our examples will have an Xbox Controller (or other Gamepad)
 
       .. remoteliteralinclude:: https://raw.githubusercontent.com/robotpy/mostrobotpy/2027.0.0a6/examples/robot/GettingStarted/robot.py
          :language: python
-         :lines: 12-27
+         :lines: 12-17, 24-27
          :lineno-match:
 
 The ``Robot`` constructor for our sample program inverts the right side of the drivetrain. Depending on your drive setup, you might need to invert the left side instead.
