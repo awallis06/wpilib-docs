@@ -1,10 +1,15 @@
 # Creating your Test Drivetrain Program (Java/C++/Python)
 
 Once everything is installed, we're ready to create a robot program.  WPILib comes with several templates for robot programs.  Use of these templates is highly recommended for new users; however, advanced users are free to write their own robot code from scratch. This article walks through creating a project from one of the provided examples which has some code already written to drive a basic robot.
+   
+* :ref:`create_java_cpp_project`
+* :ref:`create_python_project`
 
 .. important:: This guide includes code examples that involve vendor hardware for the convenience of the user. In this document, :term:`PWM` refers to the motor controller included in the KOP. The CTRE tab references the Talon FX motor controller (Falcon 500 motor), but usage is similar for TalonSRX and VictorSPX. The REV tab references the CAN SPARK MAX controlling a brushless motor, but it's similar for brushed motor. There is an assumption that the user has already installed the required :doc:`vendordeps </docs/software/vscode-overview/3rd-party-libraries>` and configured the device(s) (update firmware, assign CAN IDs, etc) according to the manufacturer documentation ([CTRE](https://docs.ctr-electronics.com/) / [REV](https://docs.revrobotics.com/brushless/spark-max/gs)).
 
-## Creating a New WPILib Project
+.. _create_java_cpp_project:
+
+## Creating a New WPILib Project (Java/C++)
 
 In Visual Studio Code, click the WPILib logo in the top right to launch the WPILib Command Palette. Select :guilabel:`Create a new project`:
 
@@ -23,7 +28,7 @@ This will bring up the language and base selection window.
 .. image:: /docs/software/vscode-overview/images/creating-robot-program/new-project-creator-language.png
    :alt: The language and base page of the WPILib New Project Creator
 
-1. **Language**: This is the language (C++, Java or Python) that will be used for this project.
+1. **Language**: This is the language (C++ or Java) that will be used for this project.
 2. **Project Base**: This box is used to select the base class or example to generate the project from. For this example, select **Getting Started**
 
 After making the selections, click :guilabel:`Next`.
@@ -534,14 +539,43 @@ Like in Autonomous, the Teleop mode has a ``TeleopInit`` and ``TeleopPeriodic`` 
 
 Utility Mode is used for testing robot functionality or running other code that shouldn't be run in a match. Similar to ``TeleopInit``, the ``UtilityInit`` and ``UtilityPeriodic`` methods are provided here for illustrative purposes only.
 
-## Sync Code (Python only)
-
-For Python project, make sure to run the WPILib Command Palette command :guilabel:`RobotPy: Sync Robot Code` while online before connecting to your robot and deploying.
-
 ## Deploying the Project to a Robot
 
-In Visual Studio Code, click the WPILib logo in the top right to launch the WPILib Command Palette. Select :guilabel:`Deploy Robot Code` to deploy the code to the robot.
+.. tab-set::
 
-.. note:: The run button in VS Code's debug view is not used to run robot code. Instead, use the :guilabel:`Deploy Robot Code` command as described above. The debug view's run button is used for running and debugging code on the local machine in simulation, which is not applicable for robot code that runs on Systemcore.
+   .. tab-item:: Java/C++
 
-For more detailed instructions, see :ref:`Deploy Java/C++ code <docs/software/vscode-overview/deploying-robot-code:Building and Deploying Robot Code>` or :doc:`Deploy Python code </docs/software/python/subcommands/deploy>`.
+      In Visual Studio Code, click the WPILib logo in the top right to launch the WPILib Command Palette. Select :guilabel:`Deploy Robot Code` to deploy the code to the robot.
+
+      .. note:: The run button in VS Code's debug view is not used to run robot code. Instead, use the :guilabel:`Deploy Robot Code` command as described above. The debug view's run button is used for running and debugging code on the local machine in simulation, which is not applicable for robot code that runs on Systemcore.
+
+      For more detailed instructions, see :ref:`Deploy Java/C++ code <docs/software/vscode-overview/deploying-robot-code:Building and Deploying Robot Code>`.
+
+   .. tab-item:: Python
+
+      In the terminal, run the following command to deploy the code to the robot:
+
+      .. tab-set::
+
+         .. tab-item:: Windows
+            :sync: windows
+
+            ```sh
+            py -3 -m robotpy deploy
+            ```
+
+         .. tab-item:: macOS
+            :sync: macos
+
+            ```sh
+            python3 -m robotpy deploy
+            ```
+
+         .. tab-item:: Linux
+            :sync: linux
+
+            ```sh
+            python3 -m robotpy deploy
+            ```
+
+      For more detailed instructions, see :doc:`Deploy Python code </docs/software/python/subcommands/deploy>`.
