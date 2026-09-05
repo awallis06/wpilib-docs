@@ -467,7 +467,8 @@ The sample robot in our examples will have an Xbox Controller (or other Gamepad)
       .. remoteliteralinclude:: https://raw.githubusercontent.com/robotpy/mostrobotpy/2027.0.0a6/examples/robot/GettingStarted/robot.py
          :language: python
          :lines: 12-17, 24-27
-         :lineno-match:
+         :linesnos:
+         :lineno-start: 12
 
 The ``Robot`` constructor for our sample program inverts the right side of the drivetrain. Depending on your drive setup, you might need to invert the left side instead.
 
