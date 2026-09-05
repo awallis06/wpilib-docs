@@ -63,6 +63,6 @@ sudo defaults write com.apple.network.local-network AllowedWiFiLocalNetworkAddre
 
 After running these commands, reboot macOS before starting the Driver Station again.
 
-.. warning:: These settings allow any app on the Mac to access local networks in those ranges without prompting. If you only need access to one robot network, a narrower CIDR range is more restrictive.
+.. warning:: This also allows any program to access any network with the address in the range of ``10.x.x.x``, which may be undesirable if you connect to other networks in that range beside's the robot's network. If you only access a robot with a single team number, you can substitute ``10.TE.AM.0/24``` (:ref:`TE.AM IP Notation <docs/networking/networking-introduction/ip-configurations:TE.AM IP Address Notation>`). If you only access the robot's network over Ethernet or WiFi, you can only run the appropriate command.
 
 .. note:: For more information, see Apple's documentation on [understanding local network privacy](https://developer.apple.com/documentation/technotes/tn3179-understanding-local-network-privacy#macOS-considerations)
