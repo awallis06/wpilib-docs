@@ -1,6 +1,6 @@
 .. include:: <isonum.txt>
 
-# FIRST Driver Station
+# FIRST Driver Station Introduction
 
 This article describes the use and features of the FIRST\ |reg| Driver Station.
 
@@ -13,14 +13,16 @@ For information on installing the Driver Station software see :doc:`/docs/zero-t
 
 The FIRST Driver Station can be launched by double-clicking the icon on the Desktop or by selecting Start->All Apps->FIRST Driver Station.
 
-.. note:: By default the FIRST Driver Station does not launch a dashboard, but it can be configured on the :ref:`settings tab <docs/software/firstdriverstation/first-driver-station:Settings Tab>` to launch a dashboard, including ones not listed by following the instructions in :doc:`/docs/software/firstdriverstation/manually-setting-the-first-driver-station-to-start-custom-dashboard`. WPILib must be :ref:`installed <docs/zero-to-robot/step-2/wpilib-setup:WPILib Installation Guide>` to use Elastic.
+At startup, the FIRST Driver Station will prompt to press Spacebar to test the E-Stop functionality. This is a safety feature to ensure that the E-Stop is functioning properly before enabling the robot. Some software may interfere with the E-Stop functionality. If you identify software that interferes with the E-Stop functionality, please report it to the [FIRST Driver Station GitHub repository](https://github.com/wpilibsuite/FirstDriverStation-Public/issues).
+
+.. note:: By default the FIRST Driver Station does not launch a dashboard, but it can be configured on the :ref:`Settings Tab` to launch a dashboard.
 
 ## Driver Station Key Shortcuts
 
 * :kbd:`Spacebar` - E-Stops the robot. This only will take effect if the robot is enabled.
 * :kbd:`[` + :kbd:`]` + :kbd:`\\` - Enable the robot (the 3 keys above Enter on most keyboards). In match mode, this will start the match.
 * :kbd:`Enter` - Disable the Robot. If in match mode, will stop the match. Otherwise will just disable the robot.
-* :kbd:`Space` - Emergency Stop the robot. After an emergency stop is triggered the roboRIO will need to be rebooted before the robot can be enabled again.
+* :kbd:`Space` - Emergency Stop the robot.
 * :kbd:`Backspace` - A-Stops the robot. In match mode, this will disable the robot for the rest of autonomous. In auto mode, this will disable the robot.
 * :kbd:`Left_Control` - Will refresh the currently connected joystick lists. Newly connected joysticks are not enumerated unless the robot is disabled or the DS is on the gamepad screen. This is because enumerating a newly connected joystick can hang the joystick thread, which we don't want to occur while enabled. This shortcut allows you to force a reenumeration on any screen on the DS. If on the gamepad screen, enumeration will always occur.
 * :kbd:`Esc` + :kbd:`I` - When held for 1 second, will reset an E-Stop.
@@ -45,10 +47,18 @@ PCs will typically have the correct network settings for the DS to connect to th
 
 The Status Pane of the Driver Station is located in the center of the display and is always visible regardless of the tab selected. It displays a selection of critical information about the state of the DS and robot:
 
-1. Connection Status Indicators - These three indicators display major status items for the DS. The "Radio Ping" indicates whether or not the DS is communicating with the robot radio. The "Robot Ping" indicates whether or not the DS is communicating with the robot. The "FMS Ping" indicates whether or not the DS is communicating with the FMS.
-2. Major Status Indicators - These three indicators display major status items for the DS. The "Connection Status (UDP/TCP)" indicates whether the DS is currently communicating with the FRC Network Communications Task on the roboRIO (it is split in half for the TCP and UDP communication). The "Robot Code (Started/Running)" indicator shows whether the team Robot Code is currently running (determined by whether or not the Driver Station Task in the robot code is updating the battery voltage), The "Gamepad Connection Status" indicator shows if at least one gamepad is plugged in and recognized by the DS.
-3. Battery Voltage - If the DS is connected and communicating with the robot, this displays current battery voltage.
-4. Status String - The Status String provides an overall status message indicating the state of the robot. Some examples are "No Robot Communication", "No Robot Code", "Emergency Stopped", and "TeleOperated Enabled". When the roboRIO brownout is triggered this will display "Voltage Brownout".
+1. Status Indicators
+
+   - The "FMS" indicates whether or not the DS is communicating with the FMS
+   - The "DS" indicates whether the team number is set in the DS
+   - The "Radio Ping" indicates whether or not the DS is communicating with the robot radio.
+   - The "Robot Ping" indicates whether or not the DS is communicating with the robot
+   - The "Connection Status (UDP/TCP)" indicates whether the DS is currently communicatingwith the MRC Communications Task on the Systemcore (it is split in half for the TCP and UDP communication)
+   - The "Robot Code (Started/Running)" indicator shows whether the team Robot Code is currently running (determined by whether or not the Driver Station Task in the robot code is updating the battery voltage)
+   - The "Gamepad Connection Status" indicator shows if at least one gamepad is plugged in and recognized by the DS
+
+2. Battery Voltage - If the DS is connected and communicating with the robot, this displays current battery voltage
+3. Status String - The Status String provides an overall status message indicating the state of the robot. Some examples are "No Robot Communication", "No Robot Code", "Emergency Stopped", and "TeleOperated Enabled". When the Systemcore brownout is triggered this will display "Voltage Brownout"
 
 ## Operation Tab
 
@@ -59,12 +69,14 @@ The Control Tab is used to control the mode of the robot and provide additional 
 
 1. OpMode (operational mode) - This section allows you to select an existing Op Mode to run during a specific match period.
 2. Robot Mode - This section controls the Robot Mode.
+
    - Teleoperated Mode causes the robot to run the code in the Teleoperated portion of the match.
    - Autonomous Mode causes the robot to run the code in the Autonomous portion of the match.
    - Utility Mode is an additional mode where code that doesn't run in a regular match can be tested.
    - Match Mode (formerly called Practice Mode) causes the robot to cycle through the same transitions as an FRC match after the Enable button is pressed (timing for match mode can be found on the setup tab). When Match Mode is in use, the DS will flash the background orange to indicate a pending enable (either the start of Autonomous or the start of Teleop after an A-Stop).
+
 3. Elapsed Time & Team Station - Indicates the amount of time the robot has been enabled, and when not connected to FMS, sets the team station to transmit to the robot.
-4. Enable/Disable - These controls enable and disable the robot. See also `Driver Station Key Shortcuts`_.
+4. Enable/Disable - These controls enable and disable the robot. See also :ref:`Driver Station Key Shortcuts`.
 
 .. note:: When connected to the Field Management System the team station control in Section 3 will be greyed out.
 
@@ -98,9 +110,26 @@ The Setup Tab contains a number of buttons teams can use to control the operatio
 2. :guilabel:`Window Mode` - Controls how the DS window is displayed, either Windowed (floating window) or Docked (attached to the screen edge).
 3. :guilabel:`Game Data` - This box can be used for at home testing of the Game Data API. Text entered into this box will appear in the Game Data API on the Robot Side. When connected to FMS, this data will be populated by the field automatically.
 4. :guilabel:`Team Number Required` - When true, the DS requires a team number to be set before it will attempt to connect to the robot.
-5. :guilabel:`Disable Sounds` - When true, the DS will not play any audio notifications.
-6. :guilabel:`Allow Joysticks in Auto` - When true, joystick input from the driver station is forwarded to the robot during the autonomous period.
+5. :guilabel:`Allow Joysticks in Auto` - When true, joystick input from the driver station is forwarded to the robot during the autonomous period.
+6. :guilabel:`Enable Gamepad Slot Shortcuts` - When true, the DS allows the use of gamepad shortcuts to select gamepad slots. Holding Start + a Dpad direction for several seconds will select the corresponding gamepad slot. The Dpad directions correspond to the following slots:
+
+   - Up = Slot 0
+   - Right = Slot 1
+   - Down = Slot 2
+   - Left = Slot 3
 7. :guilabel:`Use WiFi Static Address` - When true, the DS uses a static IP address for the WiFi interface when connecting to the robot, when unchecked, the DS uses the default network configuration.
+
+.. image:: images/driver-station/settings-tab(1.5).png
+  :alt: This is the third tab from the top on the left hand side.
+
+Match Information - This section allows you to set the match information for the current match. When connected to FMS, this information will be populated automatically.
+
+1. :guilabel:`Event Name` - The name of the event, e.g. "FRC 2024 Week 1 Event"
+2. :guilabel:`Match Number` - The number of the match, e.g. "1", "2", "3",
+3. :guilabel:`Match Type` - The type of match, e.g. "Practice", "Qualification", "Elimination", or "Test" for at home testing.
+
+4. :guilabel:`Sound Volume` - The volume of the DS sounds, from 0 to 100%.
+
 
 .. image:: images/driver-station/settings-tab(2).png
   :alt: This is the third tab from the top on the left hand side.
