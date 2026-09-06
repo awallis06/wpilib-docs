@@ -24,7 +24,7 @@ macOS will also prompt with "FirstDriverStation" would like to access data from 
 
 If you decline any of these, you can fix the settings in the ``Privacy & Security`` tab of System Settings.
 
-If Local Network access still does not work after re-enabling it there, see :ref:`macOs Permissions` for a terminal-based workaround.
+If Local Network access still does not work after re-enabling it there, see :ref:`docs/zero-to-robot/step-2/first-driver-station-installation:macos permissions` for a terminal-based workaround.
 
 ### Linux
 
@@ -54,9 +54,9 @@ Then reload udev rules:
 sudo udevadm control --reload-rules && sudo udevadm trigger
 ```
 
-## macOs Permissions
+## macOS Permissions
 
-masOs requires both Input Monitoring and Local Network access for the Driver Station to function correctly. If you decline one of these prompt, first try re-enabling access in System Settings->Privacy & Security. If the Driver Station still cannot access the local network, you can add macOS local network exceptions from Terminal for both Ethernet and Wi-Fi. The following commands allow access to any ``10.x.x.x`` address and any ``172.16.x.x`` through ``172.31.x.x`` address:
+macOS requires both Input Monitoring and Local Network access for the Driver Station to function correctly. If you decline one of these prompt, first try re-enabling access in System Settings->Privacy & Security. If the Driver Station still cannot access the local network, you can add macOS local network exceptions from Terminal for both Ethernet and Wi-Fi. The following commands allow access to any ``10.x.x.x`` address and any ``172.16.x.x`` through ``172.31.x.x`` address:
 
 ```bash
 sudo defaults write com.apple.network.local-network AllowedEthernetLocalNetworkAddresses -array "10.0.0.0/8"

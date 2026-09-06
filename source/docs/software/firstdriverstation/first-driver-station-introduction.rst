@@ -4,7 +4,7 @@
 
 This article describes the use and features of the FIRST\ |reg| Driver Station.
 
-For information on installing the Driver Station software see :doc:`/docs/zero-to-robot/step-2/first-driver-station`.
+For information on installing the Driver Station software see :doc:`/docs/zero-to-robot/step-2/first-driver-station-installation`.
 
 ## Starting the FIRST Driver Station
 
@@ -15,7 +15,7 @@ The FIRST Driver Station can be launched by double-clicking the icon on the Desk
 
 At startup, the FIRST Driver Station will prompt to press Spacebar to test the E-Stop functionality. This is a safety feature to ensure that the E-Stop is functioning properly before enabling the robot. Some software may interfere with the E-Stop functionality. If you identify software that interferes with the E-Stop functionality, please report it to the [FIRST Driver Station GitHub repository](https://github.com/wpilibsuite/FirstDriverStation-Public/issues).
 
-.. note:: By default the FIRST Driver Station does not launch a dashboard, but it can be configured on the :ref:`Settings Tab` to launch a dashboard.
+.. note:: By default the FIRST Driver Station does not launch a dashboard, but it can be configured on the :ref:`docs/software/firstdriverstation/first-driver-station-introduction:Settings Tab` to launch a dashboard.
 
 ## Driver Station Key Shortcuts
 
@@ -76,7 +76,7 @@ The Control Tab is used to control the mode of the robot and provide additional 
    - Match Mode (formerly called Practice Mode) causes the robot to cycle through the same transitions as an FRC match after the Enable button is pressed (timing for match mode can be found on the setup tab). When Match Mode is in use, the DS will flash the background orange to indicate a pending enable (either the start of Autonomous or the start of Teleop after an A-Stop).
 
 3. Elapsed Time & Team Station - Indicates the amount of time the robot has been enabled, and when not connected to FMS, sets the team station to transmit to the robot.
-4. Enable/Disable - These controls enable and disable the robot. See also :ref:`Driver Station Key Shortcuts`.
+4. Enable/Disable - These controls enable and disable the robot. See also :ref:`docs/software/firstdriverstation/first-driver-station-introduction:Driver Station Key Shortcuts`.
 
 .. note:: When connected to the Field Management System the team station control in Section 3 will be greyed out.
 

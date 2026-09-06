@@ -2,7 +2,7 @@
 
 .. note:: If WPILib is not installed to the default location (such as when files are copied to a PC manually), the dashboard of choice may not launch properly. To have the DS start a custom dashboard when it starts up, you have to manually modify the settings for the default dashboard.
 
-.. warning:: This is not needed for most installations, try using the appropriate :ref:`Dashboard setting <docs/software/firstdriverstation/first-driver-station:Settings Tab>` for your language first.
+.. warning:: This is not needed for most installations, try using the appropriate :ref:`Dashboard setting <docs/software/firstdriverstation/first-driver-station-introduction:Settings Tab>` for your language first.
 
 ## Selecting Driver Station Dashboard from Default Options
 
