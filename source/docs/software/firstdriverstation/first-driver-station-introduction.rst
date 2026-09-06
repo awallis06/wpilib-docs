@@ -102,7 +102,7 @@ The Driver Station has the capability of "locking" a USB device into a specific 
 ## Settings Tab
 
 .. image:: images/driver-station/settings-tab(1).png
-  :alt: This is the third tab from the top on the left hand side.
+  :alt: This is the third tab from the top on the left hand side, indicated by a gear icon.
 
 The Setup Tab contains a number of buttons teams can use to control the operation of the Driver Station:
 
@@ -120,7 +120,8 @@ The Setup Tab contains a number of buttons teams can use to control the operatio
 7. :guilabel:`Use WiFi Static Address` - When true, the DS uses a static IP address for the WiFi interface when connecting to the robot, when unchecked, the DS uses the default network configuration.
 
 .. image:: images/driver-station/settings-tab(1.5).png
-  :alt: This is the third tab from the top on the left hand side.
+  :alt: This is the third tab from the top on the left hand side, indicated by a gear icon.
+
 
 Match Information - This section allows you to set the match information for the current match. When connected to FMS, this information will be populated automatically.
 
@@ -132,27 +133,43 @@ Match Information - This section allows you to set the match information for the
 
 
 .. image:: images/driver-station/settings-tab(2).png
-  :alt: This is the third tab from the top on the left hand side.
+  :alt: This is the third tab from the top on the left hand side, indicated by a gear icon.
+
 
 1. :guilabel:`Restart Robot Code` - This button attempts to restart the code running on the robot (but not restart the OS).
-2. :guilabel:`Reboot Robot` - This button attempts to perform a remote reboot of the Systemcore (after clicking through a confirmation dialog).
-3. :guilabel:`Reset Times To FTC` - This button resets the times to FTC.
-4. :guilabel:`Reset Times To FRC` - This button resets the times to FRC.
-5. :guilabel:`About FIRST Driver Station` - This button launches a window with information about the DS.
+2. :guilabel:`Stop Robot Code` - This button attempts to stop the code running on the robot (but not restart the OS).
+3. :guilabel:`Reboot Robot` - This button attempts to perform a remote reboot of the Systemcore (after clicking through a confirmation dialog).
+4. :guilabel:`Reset Times To FTC` - This button resets the times to FTC.
+5. :guilabel:`Reset Times To FRC` - This button resets the times to FRC.
+6. :guilabel:`About FIRST Driver Station` - This button launches a window with information about the DS.
+7. :guilabel:`Keyboard Shortcuts` - This button launches a window with information about the DS keyboard shortcuts.
 
 .. image:: images/driver-station/settings-tab(3).png
-  :alt: This is the third tab from the top on the left hand side.
+  :alt: This is the third tab from the top on the left hand side, indicated by a gear icon.
 
-1. :guilabel:`Automatically Enable Teleop In Match Mode` - When true, match mode automatically enables teleop after auto.
-2. Match Mode Timing - Set the duration of each match period.
-3. :guilabel:`Dashboard` - The dashboard application to launch alongside the DS, defaults to none.
+
+1. :guilabel:`Automatically Enable Teleop In Match Mode` - When true, match mode disables the robot at the end of autonomous for :guilabel:`Tele Delay` seconds, then automatically enables the robot for teleop. When false, the robot will remain disabled at the end of autonomous until the enable button is pressed.
+2. :guilabel:`Disable Auto When Timer Ends` - When true, the robot will automatically disable at the end of autonomous. When false, the robot will remain enabled at the end of autonomous until the enable button is pressed.
+3. Match Mode Timing - Set the duration of each match period.
+
+  1. :guilabel:`Start Delay` - The delay before the match starts after the enable button is pressed.
+  2. :guilabel:`Auto Time` - The duration of the autonomous period
+  3. :guilabel:`Tele Delay` - The delay before the teleop period starts after the autonomous period ends.
+  4. :guilabel:`Tele Time` - The duration of the teleop period
+
+4. :guilabel:`Display Font Size` - The size of the font used in the DS
+5. :guilabel:`Console Font Size` - The size of the font used in the DS console points.
+6. :guilabel:`Alerts Font Size` - The size of the font used in the DS alerts
 
 .. image:: images/driver-station/settings-tab(4).png
-  :alt: This is the third tab from the top on the left hand side.
+  :alt: This is the third tab from the top on the left hand side, indicated by a gear icon.
 
-1. :guilabel:`Show Debug Graph` - When true, the debug graph is visible on the Graph tab.
-2. :guilabel:`Open Log Viewer In Browser` - Opens AdvantageScope Lite in a browser tab.
-3. Web Server API Key - Displays the API key for the Web Server
+1. :guilabel:`Dashboard` - The dashboard application to launch alongside the DS, defaults to none.
+2. :guilabel:`Show Debug Graph` - When true, the debug graph is visible on the Graph tab, showing debug info like loop times.
+3. :guilabel:`Open Log Viewer In Browser` - Opens AdvantageScope Lite in a browser tab.
+4. :guilabel:`Open Logs Folder` - Opens the folder where the DS logs are stored.
+
+Addtionally, a link to the Driver Station web server and the API key needed for interacting with the DS web server are displayed in this section.
 
 ## Reporting Tab
 
