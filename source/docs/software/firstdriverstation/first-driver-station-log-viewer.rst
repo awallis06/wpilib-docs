@@ -7,11 +7,9 @@ In an effort to provide information to aid in debugging, the FIRST Driver Statio
 .. image:: images/driver-station-log-viewer/logging.png
    :alt: Showing how to launch the Log Viewer Webpage using the settings tab and view the log output from the logging tab on the right hand side.
 
-.. note:: Several alternative tools exist that provide similar functionality to the AdvantageScope Log Viewer. [DSLOG Reader](https://github.com/orangelight/DSLOG-Reader) is a third-party option. Note that WPILib offers no support for third-party projects.
-
 ## Event Logs
 
-The  Driver Station logs all messages sent to the Logs tab into a new Log file. Log files are stored in the ``~/.firstds`` on unix platforms or ``PublicDocuments/FIRSTDriverStation/Logs`` on Windows. Each log has FIRST_DS in the file name with extension ``.wpilog``.
+The  Driver Station logs all messages sent to the Logs tab into a new Log file. Log files are stored in the ``~/.firstds`` on unix platforms or ``Public Documents/FIRSTDriverStation/Logs`` on Windows. Each log has FIRST_DS in the file name with extension ``.wpilog``.
 
 .. image:: images/driver-station-log-viewer/first-ds-webpage.png
    :alt: Overview of FIRST Driver Station web server

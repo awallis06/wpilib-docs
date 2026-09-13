@@ -17,7 +17,7 @@ The FIRST Driver Station allows users to configure custom dashboards or change t
 
 ### File location
 
-The configuration files are located at ``C:\Users\Public\Documents\FIRSTDriverStation\DriverStationDashboardSettings.json`` for Windows systems, or ``~/.firstds/DriverStationDashboardSettings.json`` for Unix systems. If this file does not already exist, you can create one yourself and place it in the correct DS configuration directory as mentioned previously.
+The configuration files are located at ``C:\Users\Public\Public Documents\FIRSTDriverStation\DriverStationDashboardSettings.json`` for Windows systems, or ``~/.firstds/DriverStationDashboardSettings.json`` for Unix systems. If this file does not already exist, you can create one yourself and place it in the correct DS configuration directory as mentioned previously.
 
 .. note:: While DS is running, you can also access and change this file through the web server at ``http://localhost:6768/overrides.html```.
 

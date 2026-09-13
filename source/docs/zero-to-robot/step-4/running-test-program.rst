@@ -14,12 +14,12 @@ Running your test program while tethered to the Driver Station via ethernet or U
 
 The roboRIO should be powered on and connected to the PC over Ethernet or USB.
 
-## Starting the FRC Driver Station
+## Starting the FIRST Driver Station
 
 .. image:: /docs/software/firstdriverstation/images/driver-station/first-ds-icon.png
     :alt: The Driver Station icon found on the desktop.
 
-The FIRST Driver Station can be launched by double-clicking the icon on the Desktop or by selecting Start->All Programs->FRC Driver Station.
+The FIRST Driver Station can be launched by double-clicking the icon on the Desktop or by selecting Start->All Programs->FIRST Driver Station.
 
 ## Setting Up the Driver Station
 
@@ -32,6 +32,8 @@ PCs will typically have the correct network settings for the DS to connect to th
 
 
 ## Confirm Connectivity
+
+.. todo:: Update screenshots to show the new Driver Station UI
 
 .. figure:: images/run-test-program/confirm-connectivity-tethered.png
 

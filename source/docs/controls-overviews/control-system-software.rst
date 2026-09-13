@@ -6,9 +6,7 @@ The FRC\ |reg| & FTC\ |reg| software consists of a wide variety of mandatory and
 
 ## Operating System Compatibility
 
-The primary supported OS is Windows. All required FRC software components have been tested on Windows 10 & 11.
-
-Many of the tools for C++/Java/Python programming are also supported and tested on macOS and Linux. Teams programming in C++/Java/Python should be able to develop using these systems, using a Windows system for the Windows-only operations such as the Driver Station and roboRIO Imaging Tool.
+The WPILib tools for C++/Java/Python programming are also supported and tested on Windows, and Linux x64, and macOS x64 and Arm64. Many tools additionally have windows and / or Linux ARM64 builds available. For more details on the supported operating systems and versions, see the :ref:`Supported Operating Systems section <docs/software/what-is-wpilib:platform support>`.
 
 ## Visual Studio Code
 
