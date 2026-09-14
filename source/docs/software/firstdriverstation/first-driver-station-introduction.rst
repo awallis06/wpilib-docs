@@ -131,10 +131,8 @@ Match Information - This section allows you to set the match information for the
 
 4. :guilabel:`Sound Volume` - The volume of the DS sounds, from 0 to 100%.
 
-
 .. image:: images/driver-station/settings-tab(2).png
   :alt: This is the third tab from the top on the left hand side, indicated by a gear icon.
-
 
 1. :guilabel:`Restart Robot Code` - This button attempts to restart the code running on the robot (but not restart the OS).
 2. :guilabel:`Stop Robot Code` - This button attempts to stop the code running on the robot (but not restart the OS).
@@ -147,15 +145,14 @@ Match Information - This section allows you to set the match information for the
 .. image:: images/driver-station/settings-tab(3).png
   :alt: This is the third tab from the top on the left hand side, indicated by a gear icon.
 
-
 1. :guilabel:`Automatically Enable Teleop In Match Mode` - When true, match mode disables the robot at the end of autonomous for :guilabel:`Tele Delay` seconds, then automatically enables the robot for teleop. When false, the robot will remain disabled at the end of autonomous until the enable button is pressed.
 2. :guilabel:`Disable Auto When Timer Ends` - When true, the robot will automatically disable at the end of autonomous. When false, the robot will remain enabled at the end of autonomous until the enable button is pressed.
 3. Match Mode Timing - Set the duration of each match period.
 
-  1. :guilabel:`Start Delay` - The delay before the match starts after the enable button is pressed.
-  2. :guilabel:`Auto Time` - The duration of the autonomous period
-  3. :guilabel:`Tele Delay` - The delay before the teleop period starts after the autonomous period ends.
-  4. :guilabel:`Tele Time` - The duration of the teleop period
+   - :guilabel:`Start Delay` - The delay before the match starts after the enable button is  pressed.
+   - :guilabel:`Auto Time` - The duration of the autonomous period
+   - :guilabel:`Tele Delay` - The delay before the teleop period starts after the autonomous  period ends.
+   - :guilabel:`Tele Time` - The duration of the teleop period
 
 4. :guilabel:`Display Font Size` - The size of the font used in the DS
 5. :guilabel:`Console Font Size` - The size of the font used in the DS console points.
@@ -177,13 +174,15 @@ Addtionally, a link to the Driver Station web server and the API key needed for 
   :alt: This is the forth tab from the top on the left hand side.
 
 1. Versions - Shows versions of Drive Station, WPI, and Systemcore
-2. Additional reporting information - Displays information about CAN devices.
+2. Additional reporting information - Displays information about CAN devices and DS resources.
 3. :guilabel:`Renew DHCP Lease` - Renews DHCP lease and gets a new IP address.
 
 ## Graph Tab
 
 .. image:: images/driver-station/graph-tab.png
   :alt: This is the first tab from the top on the right hand side.
+
+.. todo:: Update screenshot to show graph tab in FIRST Driver Station in Alpha 7 or later
 
 The Graph tab plots and displays advanced indicators of robot status to help teams diagnose robot issues:
 
@@ -197,20 +196,27 @@ The Graph tab plots and displays advanced indicators of robot status to help tea
 .. image:: images/driver-station/logs-tab.png
   :alt: This is the second tab from the top on the right hand side.
 
-The Logs tab displays diagnostic messages from the DS, WPILib, User Code, and/or the Systemcore.
+.. todo:: Update screenshot to show logs tab in FIRST Driver Station in Alpha 7 or later
 
-## Display Tab
+The Logs tab displays diagnostic messages from the DS, WPILib, User Code, and/or the Systemcore. See :doc:`/docs/software/vscode-overview/viewing-console-output` for more information on the robot's console.
 
-.. image:: images/driver-station/display-tab.png
+## Display and Alerts Tab
+
+.. image:: images/driver-station/display-alerts-tab.png
   :alt: This is the third tab from the top on the right hand side.
 
-The DS Display tab.
+The DS Display and Alerts tab. The Display window shows output from the ``DriverStationDisplay`` class ([Java](https://github.wpilib.org/allwpilib/docs/beta/java/org/wpilib/driverstation/DriverStationDisplay.html), [C++](https://github.wpilib.org/allwpilib/docs/beta/cpp/classwpi_1_1_driver_station_display.html), :py:class:`Python <robotpy:wpilib.DriverStationDisplay>`). See :ref:`docs/software/telemetry/persistent-alerts:Recording Faults with Persistent Alerts` for more information on Alerts.
 
-## Alerts Tab
+On both the Display and Alert windows, you can press the pop-out button to open the window in a separate window.
 
-.. image:: images/driver-station/alerts-tab.png
-  :alt: This is the forth tab from the top on the right hand side.
+.. image:: images/driver-station/alerts-popout.png
+  :alt: This is the alerts window popped out into a separate window.
 
-The Alerts tab displays any alert text.
+## Camera Tab
 
-.. todo:: Add more information about the Display and Alerts tab
+.. image:: images/driver-station/camera-tab.png
+  :alt: This is the fourth tab from the top on the right hand side.
+
+.. todo:: Update screenshot to show cameras or selection
+
+The Camera tab displays camera streams from cameras connected to the robot.
