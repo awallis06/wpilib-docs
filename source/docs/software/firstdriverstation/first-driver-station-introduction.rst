@@ -217,6 +217,4 @@ On both the Display and Alert windows, you can press the pop-out button to open 
 .. image:: images/driver-station/camera-tab.png
   :alt: This is the fourth tab from the top on the right hand side.
 
-.. todo:: Update screenshot to show cameras or selection
-
-The Camera tab displays camera streams from cameras connected to the robot.
+The Camera tab displays camera images from cameras connected to the robot. Select the camera and choose :guilabel:`View Camera` to view the camera image. The camera image can also be opened in a separate window. Clicking on the camera image will cause a new camera image to be retreived.
